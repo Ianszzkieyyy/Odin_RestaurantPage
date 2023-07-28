@@ -483,27 +483,62 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   generateElement: () => (/* binding */ generateElement),
-/* harmony export */   generateTextElement: () => (/* binding */ generateTextElement)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function generateTextElement(elementType, className, textContent) {
-    const element = document.createElement(elementType);
-
-    element.classList.add(className);
-    element.textContent = textContent
-
-    return element
+function generateElement (elType, elClass, elAttrSet, elAttrValue, elText) {
+    const el = document.createElement(elType);
+    if (elClass) el.classList.add(elClass)
+    if (elAttrSet && elAttrValue) el.setAttribute(elAttrSet, elAttrValue);
+    if (elText) el.textContent = elText;
+    return el;
 }
 
-function generateElement(elementType, className) {
-    const element = document.createElement(elementType);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateElement);
 
-    element.classList.add(className)
+/***/ }),
 
-    return element
+/***/ "./src/homeModule.js":
+/*!***************************!*\
+  !*** ./src/homeModule.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _createElements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createElements */ "./src/createElements.js");
+/* harmony import */ var _assets_hero_img_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hero-img.jpg */ "./src/assets/hero-img.jpg");
+
+
+
+const content = document.getElementById('content');
+
+const createHome = () => {
+    const hero = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero', 0, 0, 0)
+    const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'hero-bg', 'src', _assets_hero_img_jpg__WEBPACK_IMPORTED_MODULE_1__, 0)
+    const heroContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-content', 0, 0, 0)
+
+    const heroHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h1', 'hero-h1', 0, 0, 'Filipino Cuisine')
+    const heroSub = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h2', 'hero-h2', 0, 0, 'A Taste Of')
+    const heroBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'hero-btn', 0, 0, 'Order Now')
+
+    heroContent.append(heroSub, heroHeader, heroBtn)
+    hero.append(heroBg, heroContent)
+    content.appendChild(hero)
 }
 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHome);
 
+/***/ }),
+
+/***/ "./src/assets/hero-img.jpg":
+/*!*********************************!*\
+  !*** ./src/assets/hero-img.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "hero-img.jpg";
 
 /***/ })
 
@@ -558,6 +593,18 @@ function generateElement(elementType, className) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -574,6 +621,29 @@ function generateElement(elementType, className) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -588,7 +658,9 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _createElements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createElements */ "./src/createElements.js");
-/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+/* harmony import */ var _homeModule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homeModule */ "./src/homeModule.js");
+/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+
 
 
 
@@ -596,15 +668,32 @@ __webpack_require__.r(__webpack_exports__);
 
 const content = document.getElementById('content');
 
-const nav = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__.generateElement)('nav', 'navbar')
-const navHome = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__.generateTextElement)('li', 'nav-home', 'Home');
-const navMenu = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__.generateTextElement)('li', 'nav-menu', 'Menu');
-const navCtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__.generateTextElement)('li', 'nav-ctn', 'Contact');
+const createNav = (() => {
+
+    const nav = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('nav', 'navbar', 0, 0, 0);
+    const navHome = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('li', 'nav-home', 0, 0, 'Home')
+    const navMenu = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('li', 'nav-menu', 0, 0, 'Menu')
+    const navCtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('li', 'nav-ctn', 0, 0, 'Contact')
+
+    navHome.addEventListener('click', (e) => {
+        alert('home was clicked')
+        ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__["default"])()
+    })
+
+    navMenu.addEventListener('click', (e) => {
+        alert('menu was clicked')
+    })
+
+    navCtn.addEventListener('click', (e) => {
+        alert('contact was clicked')
+    })
+
+    nav.append(navHome, navMenu, navCtn)
+    content.appendChild(nav)
+
+})();
 
 
-
-nav.append(navHome, navMenu, navCtn);
-content.appendChild(nav);
 
 
 })();
