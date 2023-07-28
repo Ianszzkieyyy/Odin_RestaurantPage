@@ -1,18 +1,9 @@
-function generateTextElement(elementType, className, textContent) {
-    const element = document.createElement(elementType);
-
-    element.classList.add(className);
-    element.textContent = textContent
-
-    return element
+function generateElement (elType, elClass, elAttrSet, elAttrValue, elText) {
+    const el = document.createElement(elType);
+    if (elClass) el.classList.add(elClass)
+    if (elAttrSet && elAttrValue) el.setAttribute(elAttrSet, elAttrValue);
+    if (elText) el.textContent = elText;
+    return el;
 }
 
-function generateElement(elementType, className) {
-    const element = document.createElement(elementType);
-
-    element.classList.add(className)
-
-    return element
-}
-
-export {generateTextElement, generateElement}
+export default generateElement
