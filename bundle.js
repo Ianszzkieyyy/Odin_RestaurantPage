@@ -509,26 +509,89 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _createElements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createElements */ "./src/createElements.js");
 /* harmony import */ var _assets_hero_img_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hero-img.jpg */ "./src/assets/hero-img.jpg");
+/* harmony import */ var _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/body-img1.jpg */ "./src/assets/body-img1.jpg");
+/* harmony import */ var _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/body-img2.webp */ "./src/assets/body-img2.webp");
+/* harmony import */ var _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/body-img3.jpg */ "./src/assets/body-img3.jpg");
+
+
+
+
 
 
 
 const content = document.getElementById('content');
 
 const createHome = () => {
-    const hero = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero', 0, 0, 0)
-    const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'hero-bg', 'src', _assets_hero_img_jpg__WEBPACK_IMPORTED_MODULE_1__, 0)
-    const heroContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-content', 0, 0, 0)
 
-    const heroHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h1', 'hero-h1', 0, 0, 'Filipino Cuisine')
-    const heroSub = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h2', 'hero-h2', 0, 0, 'A Taste Of')
-    const heroBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'hero-btn', 0, 0, 'Order Now')
+    const createHero = (() => {
+        const hero = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero', 0, 0, 0)
+        const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'hero-bg', 'src', _assets_hero_img_jpg__WEBPACK_IMPORTED_MODULE_1__, 0)
+        const heroContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-content', 0, 0, 0)
 
-    heroContent.append(heroSub, heroHeader, heroBtn)
-    hero.append(heroBg, heroContent)
-    content.appendChild(hero)
+        const heroHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h1', 'hero-h1', 0, 0, 'Filipino Cuisine')
+        const heroSub = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h2', 'hero-h2', 0, 0, 'A Taste Of')
+        const heroBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'hero-btn', 0, 0, 'Order Now')
+
+        heroContent.append(heroSub, heroHeader, heroBtn)
+        hero.append(heroBg, heroContent)
+        content.appendChild(hero)
+    })()
+
+    const createSection = (() => {
+        const body = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'body', 0, 0, 0)
+        const bodyContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-content', 0, 0, 0)
+
+        const bodyText = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-text', 0, 0, 0)
+        const bodyHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'body-header', 0, 0, 'Passed Down Through Generations')
+        const bodyPara = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'body-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const bodyButton = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'body-btn', 0, 0, 'View Menu')
+
+        const bodyImages = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-imgs-container', 0, 0, 0)
+        const bodyImg1 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_2__, 0)
+        const bodyImg2 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_3__, 0)
+        const bodyImg3 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_4__, 0)
+
+
+        bodyText.append(bodyHeader, bodyPara, bodyButton)
+        bodyImages.append(bodyImg1, bodyImg2, bodyImg3)
+        bodyContent.append(bodyText, bodyImages)
+        body.append(bodyContent)
+        content.append(body)
+    })()
+    
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHome);
+
+/***/ }),
+
+/***/ "./src/assets/body-img1.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/body-img1.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "body-img1.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/body-img2.webp":
+/*!***********************************!*\
+  !*** ./src/assets/body-img2.webp ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "body-img2.webp";
+
+/***/ }),
+
+/***/ "./src/assets/body-img3.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/body-img3.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "body-img3.jpg";
 
 /***/ }),
 
