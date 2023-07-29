@@ -10,6 +10,8 @@ import FtrIcon1 from './assets/ftr-icon1.svg'
 import FtrIcon2 from './assets/ftr-icon3.svg'
 import FtrIcon3 from './assets/ftr-icon2.svg'
 
+import CTAImg from './assets/cta-img.jpg'
+
 const content = document.getElementById('content');
 
 const createHome = () => {
@@ -77,6 +79,23 @@ const createHome = () => {
         featureContent.append(featureHeader, featureCards)
         feature.append(featureContent)
         content.append(feature)
+    })()
+
+    const createCTA = (() => {
+        const cta = generateElement('section', 'cta', 0, 0, 0)
+        const ctaLeft = generateElement('div', 'cta-left', 0, 0 ,0)
+        const ctaRight = generateElement('div', 'cta-right', 0, 0 ,0)
+
+        const ctaImg = generateElement('img', 'cta-img', 'src', CTAImg, 0)
+
+        const ctaHeader = generateElement('h3', 'cta-header', 0, 0, 'Send a Message')
+        const ctaBody = generateElement('p', 'cta-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const ctaBtn = generateElement('button', 'cta-btn', 0, 0, 'Contact Us')
+
+        ctaLeft.append(ctaImg)
+        ctaRight.append(ctaHeader, ctaBody, ctaBtn)
+        cta.append(ctaLeft, ctaRight)
+        content.append(cta)
     })()
 }
 

@@ -515,6 +515,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/ftr-icon1.svg */ "./src/assets/ftr-icon1.svg");
 /* harmony import */ var _assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/ftr-icon3.svg */ "./src/assets/ftr-icon3.svg");
 /* harmony import */ var _assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/ftr-icon2.svg */ "./src/assets/ftr-icon2.svg");
+/* harmony import */ var _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/cta-img.jpg */ "./src/assets/cta-img.jpg");
+
+
 
 
 
@@ -595,6 +598,23 @@ const createHome = () => {
         feature.append(featureContent)
         content.append(feature)
     })()
+
+    const createCTA = (() => {
+        const cta = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'cta', 0, 0, 0)
+        const ctaLeft = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-left', 0, 0 ,0)
+        const ctaRight = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-right', 0, 0 ,0)
+
+        const ctaImg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'cta-img', 'src', _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_8__, 0)
+
+        const ctaHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'cta-header', 0, 0, 'Send a Message')
+        const ctaBody = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'cta-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const ctaBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'cta-btn', 0, 0, 'Contact Us')
+
+        ctaLeft.append(ctaImg)
+        ctaRight.append(ctaHeader, ctaBody, ctaBtn)
+        cta.append(ctaLeft, ctaRight)
+        content.append(cta)
+    })()
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHome);
@@ -628,6 +648,16 @@ module.exports = __webpack_require__.p + "body-img2.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "body-img3.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/cta-img.jpg":
+/*!********************************!*\
+  !*** ./src/assets/cta-img.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "cta-img.jpg";
 
 /***/ }),
 
