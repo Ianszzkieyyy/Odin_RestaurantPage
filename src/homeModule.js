@@ -1,9 +1,14 @@
 import generateElement from "./createElements";
 
 import HeroBg from './assets/hero-img.jpg'
+
 import BodyImg1 from './assets/body-img1.jpg'
 import BodyImg2 from './assets/body-img2.webp'
 import BodyImg3 from './assets/body-img3.jpg'
+
+import FtrIcon1 from './assets/ftr-icon1.svg'
+import FtrIcon2 from './assets/ftr-icon3.svg'
+import FtrIcon3 from './assets/ftr-icon2.svg'
 
 const content = document.getElementById('content');
 
@@ -23,7 +28,7 @@ const createHome = () => {
         content.appendChild(hero)
     })()
 
-    const createSection = (() => {
+    const createBody= (() => {
         const body = generateElement('section', 'body', 0, 0, 0)
         const bodyContent = generateElement('div', 'body-content', 0, 0, 0)
 
@@ -45,6 +50,34 @@ const createHome = () => {
         content.append(body)
     })()
     
+    const createFeature = (() => {
+        const feature = generateElement('section', 'ftr', 0, 0, 0)
+        const featureContent = generateElement('div', 'ftr-content', 0, 0, 0)
+        
+        const featureHeader = generateElement('h3', 'feature-header', 0, 0, 'Flavored With Love.')
+        const featureCards = generateElement('div', 'ftr-cards', 0, 0, 0)
+
+        const card1 = createCard(FtrIcon1, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const card2 = createCard(FtrIcon2, 'Fresh from our Trusted Farms', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const card3 = createCard(FtrIcon3, 'Served with the Finest Touch', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+
+        function createCard (icon, heading, paragraph) {
+            const card = generateElement('div', 'ftr-card', 0, 0, 0)
+
+            const cardIcon = generateElement('img', 'card-icon', 'src', icon, 0)
+            const cardHeader = generateElement('h4', 'card-header', 0, 0, heading)
+            const cardBody = generateElement('p', 'card-p', 0, 0, paragraph)
+
+            card.append(cardIcon, cardHeader, cardBody)
+
+            return card
+        }
+
+        featureCards.append(card1, card2, card3)
+        featureContent.append(featureHeader, featureCards)
+        feature.append(featureContent)
+        content.append(feature)
+    })()
 }
 
 export default createHome
