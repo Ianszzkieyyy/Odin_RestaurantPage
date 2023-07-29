@@ -512,6 +512,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/body-img1.jpg */ "./src/assets/body-img1.jpg");
 /* harmony import */ var _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/body-img2.webp */ "./src/assets/body-img2.webp");
 /* harmony import */ var _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/body-img3.jpg */ "./src/assets/body-img3.jpg");
+/* harmony import */ var _assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/ftr-icon1.svg */ "./src/assets/ftr-icon1.svg");
+/* harmony import */ var _assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/ftr-icon3.svg */ "./src/assets/ftr-icon3.svg");
+/* harmony import */ var _assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/ftr-icon2.svg */ "./src/assets/ftr-icon2.svg");
+
+
+
+
+
 
 
 
@@ -537,7 +545,7 @@ const createHome = () => {
         content.appendChild(hero)
     })()
 
-    const createSection = (() => {
+    const createBody= (() => {
         const body = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'body', 0, 0, 0)
         const bodyContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-content', 0, 0, 0)
 
@@ -559,6 +567,34 @@ const createHome = () => {
         content.append(body)
     })()
     
+    const createFeature = (() => {
+        const feature = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'ftr', 0, 0, 0)
+        const featureContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-content', 0, 0, 0)
+        
+        const featureHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'feature-header', 0, 0, 'Flavored With Love.')
+        const featureCards = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-cards', 0, 0, 0)
+
+        const card1 = createCard(_assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_5__, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const card2 = createCard(_assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_6__, 'Fresh from our Trusted Farms', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const card3 = createCard(_assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_7__, 'Served with the Finest Touch', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+
+        function createCard (icon, heading, paragraph) {
+            const card = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-card', 0, 0, 0)
+
+            const cardIcon = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'card-icon', 'src', icon, 0)
+            const cardHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h4', 'card-header', 0, 0, heading)
+            const cardBody = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'card-p', 0, 0, paragraph)
+
+            card.append(cardIcon, cardHeader, cardBody)
+
+            return card
+        }
+
+        featureCards.append(card1, card2, card3)
+        featureContent.append(featureHeader, featureCards)
+        feature.append(featureContent)
+        content.append(feature)
+    })()
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHome);
@@ -592,6 +628,36 @@ module.exports = __webpack_require__.p + "body-img2.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "body-img3.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/ftr-icon1.svg":
+/*!**********************************!*\
+  !*** ./src/assets/ftr-icon1.svg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ftr-icon1.svg";
+
+/***/ }),
+
+/***/ "./src/assets/ftr-icon2.svg":
+/*!**********************************!*\
+  !*** ./src/assets/ftr-icon2.svg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ftr-icon2.svg";
+
+/***/ }),
+
+/***/ "./src/assets/ftr-icon3.svg":
+/*!**********************************!*\
+  !*** ./src/assets/ftr-icon3.svg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ftr-icon3.svg";
 
 /***/ }),
 
