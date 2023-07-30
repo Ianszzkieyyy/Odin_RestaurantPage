@@ -1,7 +1,7 @@
 'use strict';
 
 import generateElement from './createElements';
-import createHome from './homeModule';
+import {createHome, wipeHome} from './homeModule';
 import './styles/style.css'
 
 const content = document.getElementById('content');
@@ -13,16 +13,18 @@ const createNav = (() => {
     const navMenu = generateElement('li', 'nav-menu', 0, 0, 'Menu')
     const navCtn = generateElement('li', 'nav-ctn', 0, 0, 'Contact')
 
+    const state = 'home';
+
     navHome.addEventListener('click', (e) => {
         alert('home was clicked')
     })
 
     navMenu.addEventListener('click', (e) => {
-        alert('menu was clicked')
+        wipeHome()
     })
 
     navCtn.addEventListener('click', (e) => {
-        alert('contact was clicked')
+        wipeHome()
     })
 
     nav.append(navHome, navMenu, navCtn)

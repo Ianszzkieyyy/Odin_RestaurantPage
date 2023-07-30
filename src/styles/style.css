@@ -21,6 +21,8 @@ h1, h3 {
     font-family: 'Hammersmith One', sans-serif;
 }
 
+
+
 /* Hero Section */
 
 nav {
@@ -41,6 +43,18 @@ nav li {
     cursor: pointer;
 }
 
+.hero {
+    position: relative;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.hero.fade-out {
+    opacity: 0;
+}
+
 .hero-bg {
     background-image: url('../assets/hero-img.jpg');
     height: 100vh;
@@ -59,9 +73,6 @@ nav li {
     background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */
 }
 
-.hero {
-    position: relative;
-}
 
 .hero-content {
     position: absolute;
@@ -92,6 +103,14 @@ nav li {
 
 .body {
     background-color: #F5F5EF;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.body.fade-out {
+    opacity: 0;
 }
 
 .body-content {
@@ -133,6 +152,14 @@ nav li {
 .ftr {
     background-color: black;
     color: white;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.ftr.fade-out {
+    opacity: 0;
 }
 
 .ftr-content {
@@ -178,6 +205,14 @@ nav li {
     gap: 50px;
     align-items: center;
     padding: 100px;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.cta.fade-out {
+    opacity: 0;
 }
 
 .cta-left {

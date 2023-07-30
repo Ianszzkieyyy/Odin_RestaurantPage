@@ -1,7 +1,5 @@
 import generateElement from "./createElements";
 
-import HeroBg from './assets/hero-img.jpg'
-
 import BodyImg1 from './assets/body-img1.jpg'
 import BodyImg2 from './assets/body-img2.webp'
 import BodyImg3 from './assets/body-img3.jpg'
@@ -12,12 +10,15 @@ import FtrIcon3 from './assets/ftr-icon2.svg'
 
 import CTAImg from './assets/cta-img.jpg'
 
+const hero = generateElement('section', 'hero', 0, 0, 0)
+const body = generateElement('section', 'body', 0, 0, 0)
+const feature = generateElement('section', 'ftr', 0, 0, 0)
+const cta = generateElement('section', 'cta', 0, 0, 0)
 const content = document.getElementById('content');
 
 const createHome = () => {
 
     const createHero = (() => {
-        const hero = generateElement('section', 'hero', 0, 0, 0)
         const heroBg = generateElement('div', 'hero-bg', 0, 0, 0)
         const heroContent = generateElement('div', 'hero-content', 0, 0, 0)
 
@@ -31,7 +32,7 @@ const createHome = () => {
     })()
 
     const createBody= (() => {
-        const body = generateElement('section', 'body', 0, 0, 0)
+        
         const bodyContent = generateElement('div', 'body-content', 0, 0, 0)
 
         const bodyText = generateElement('div', 'body-text', 0, 0, 0)
@@ -53,7 +54,7 @@ const createHome = () => {
     })()
     
     const createFeature = (() => {
-        const feature = generateElement('section', 'ftr', 0, 0, 0)
+        
         const featureContent = generateElement('div', 'ftr-content', 0, 0, 0)
         
         const featureHeader = generateElement('h3', 'ftr-header', 0, 0, 'Flavored With Love.')
@@ -82,7 +83,7 @@ const createHome = () => {
     })()
 
     const createCTA = (() => {
-        const cta = generateElement('section', 'cta', 0, 0, 0)
+        
         const ctaLeft = generateElement('div', 'cta-left', 0, 0 ,0)
         const ctaRight = generateElement('div', 'cta-right', 0, 0 ,0)
 
@@ -99,4 +100,18 @@ const createHome = () => {
     })()
 }
 
-export default createHome
+const wipeHome = () => {
+    const elements = [hero, body, feature, cta]
+
+    elements.forEach((element) => {
+        element.classList.add('fade-out')
+    })
+
+    setTimeout(() => {
+        elements.forEach((element) => {
+            element.remove()
+        })
+    }, 250)
+}
+
+export {createHome, wipeHome}

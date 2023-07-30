@@ -48,6 +48,8 @@ h1, h3 {
     font-family: 'Hammersmith One', sans-serif;
 }
 
+
+
 /* Hero Section */
 
 nav {
@@ -68,6 +70,18 @@ nav li {
     cursor: pointer;
 }
 
+.hero {
+    position: relative;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.hero.fade-out {
+    opacity: 0;
+}
+
 .hero-bg {
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
     height: 100vh;
@@ -86,9 +100,6 @@ nav li {
     background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */
 }
 
-.hero {
-    position: relative;
-}
 
 .hero-content {
     position: absolute;
@@ -119,6 +130,14 @@ nav li {
 
 .body {
     background-color: #F5F5EF;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.body.fade-out {
+    opacity: 0;
 }
 
 .body-content {
@@ -160,6 +179,14 @@ nav li {
 .ftr {
     background-color: black;
     color: white;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.ftr.fade-out {
+    opacity: 0;
 }
 
 .ftr-content {
@@ -205,6 +232,14 @@ nav li {
     gap: 50px;
     align-items: center;
     padding: 100px;
+
+    /* Animation */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.cta.fade-out {
+    opacity: 0;
 }
 
 .cta-left {
@@ -231,7 +266,7 @@ nav li {
     background-color: #715128;
     color: white;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,YAAY;;AAIZ;IACI,sBAAsB;IACtB,SAAS;IACT,UAAU;AACd;;AAEA;IACI,yCAAyC;AAC7C;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,0CAA0C;AAC9C;;AAEA,iBAAiB;;AAEjB;IACI,kBAAkB;IAClB,WAAW;;IAEX,aAAa;IACb,qBAAqB;IACrB,6BAA6B;IAC7B,qBAAqB;;IAErB,UAAU;AACd;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,yDAA+C;IAC/C,aAAa;IACb,2BAA2B;IAC3B,sBAAsB;IACtB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,oCAAoC,EAAE,uDAAuD;AACjG;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,SAAS;IACT,gCAAgC;IAChC,kBAAkB;AACtB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,0CAA0C;IAC1C,eAAe;IACf,gBAAgB;IAChB,mBAAmB;IACnB,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA,SAAS;;AAET;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,YAAY;AAChB;;;AAGA;IACI,aAAa;IACb,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,iBAAiB;AACrB;;AAEA,YAAY;;AAEZ;IACI,uBAAuB;IACvB,YAAY;AAChB;;AAEA;IACI,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B;AACJ;;AAEA;IACI,WAAW;IACX,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA,QAAQ;;AAER;IACI,yBAAyB;IACzB,aAAa;IACb,SAAS;IACT,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,UAAU;IACV,iBAAiB;IACjB,gBAAgB;;AAEpB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,yBAAyB;IACzB,YAAY;AAChB","sourcesContent":["/* General */\n\n@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hanken+Grotesk:wght@400;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    font-family: 'Hanken Grotesk', sans-serif;\n}\n\nbutton {\n    border: none;\n    padding: 15px 30px;\n}\n\nh1, h3 {\n    font-family: 'Hammersmith One', sans-serif;\n}\n\n/* Hero Section */\n\nnav {\n    position: absolute;\n    width: 100%;\n\n    display: flex;\n    list-style-type: none;\n    justify-content: space-evenly;\n    padding: 1.5rem 25rem;\n\n    z-index: 1;\n}\n\nnav li {\n    color: white;\n    font-size: 1.125rem;\n    cursor: pointer;\n}\n\n.hero-bg {\n    background-image: url('../assets/hero-img.jpg');\n    height: 100vh;\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n.hero-bg::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */\n}\n\n.hero {\n    position: relative;\n}\n\n.hero-content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -60%);\n    text-align: center;\n}\n\n.hero-content {\n    color: white;\n}\n\n.hero-h1 {\n    font-family: 'Hammersmith One', sans-serif;\n    font-size: 6rem;\n    font-weight: 400;\n    letter-spacing: 8px;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n.hero-h2 {\n    font-size: 3rem;\n}\n\n/* Body */\n\n.body {\n    background-color: #F5F5EF;\n}\n\n.body-content {\n    display: flex;\n    padding: 150px;\n}\n\n.body-header {\n    font-size: 3rem;\n    font-weight: 400;\n    line-height: 1;\n    margin-bottom: 30px;\n}\n\n.body-p {\n    width: 80%;\n    margin-bottom: 30px;\n}\n\n.body-btn {\n    background-color: black;\n    color: white;\n}\n\n\n.body-imgs-container {\n    display: flex;\n    gap: 30px;\n}\n\n.body-imgs-container img {\n    width: 200px;\n    height: 410px;\n    object-fit: cover;\n}\n\n/* Feature */\n\n.ftr {\n    background-color: black;\n    color: white;\n}\n\n.ftr-content {\n    padding: 150px;\n    text-align: center;\n}\n\n.ftr-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 80px;\n}\n\n.ftr-cards {\n    display: flex;\n    justify-content: space-evenly;\n    gap: 30px\n}\n\n.card-icon {\n    width: 60px;\n    margin-bottom: 40px;\n}\n\n.card-header {\n    font-weight: 700;\n    text-transform: uppercase;\n    width: 180px;\n    margin: 0 auto 40px auto;\n}\n\n.card-p {\n    width: 180px;\n    text-align: center;\n}\n\n/* CTA */\n\n.cta {\n    background-color: #F5F5EF;\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    padding: 100px;\n}\n\n.cta-left {\n    width: 50%;\n    object-fit: cover;\n    overflow: hidden;\n    \n}\n\n.cta-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 40px;\n}\n\n.cta-p {\n    font-size: 1.2rem;\n    width: 80%;\n    margin-bottom: 40px;\n}\n\n.cta-btn {\n    background-color: #715128;\n    color: white;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,YAAY;;AAIZ;IACI,sBAAsB;IACtB,SAAS;IACT,UAAU;AACd;;AAEA;IACI,yCAAyC;AAC7C;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,0CAA0C;AAC9C;;;;AAIA,iBAAiB;;AAEjB;IACI,kBAAkB;IAClB,WAAW;;IAEX,aAAa;IACb,qBAAqB;IACrB,6BAA6B;IAC7B,qBAAqB;;IAErB,UAAU;AACd;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,kBAAkB;;IAElB,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,yDAA+C;IAC/C,aAAa;IACb,2BAA2B;IAC3B,sBAAsB;IACtB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,oCAAoC,EAAE,uDAAuD;AACjG;;;AAGA;IACI,kBAAkB;IAClB,QAAQ;IACR,SAAS;IACT,gCAAgC;IAChC,kBAAkB;AACtB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,0CAA0C;IAC1C,eAAe;IACf,gBAAgB;IAChB,mBAAmB;IACnB,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA,SAAS;;AAET;IACI,yBAAyB;;IAEzB,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,YAAY;AAChB;;;AAGA;IACI,aAAa;IACb,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,iBAAiB;AACrB;;AAEA,YAAY;;AAEZ;IACI,uBAAuB;IACvB,YAAY;;IAEZ,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B;AACJ;;AAEA;IACI,WAAW;IACX,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA,QAAQ;;AAER;IACI,yBAAyB;IACzB,aAAa;IACb,SAAS;IACT,mBAAmB;IACnB,cAAc;;IAEd,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,UAAU;IACV,iBAAiB;IACjB,gBAAgB;;AAEpB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,yBAAyB;IACzB,YAAY;AAChB","sourcesContent":["/* General */\n\n@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hanken+Grotesk:wght@400;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    font-family: 'Hanken Grotesk', sans-serif;\n}\n\nbutton {\n    border: none;\n    padding: 15px 30px;\n}\n\nh1, h3 {\n    font-family: 'Hammersmith One', sans-serif;\n}\n\n\n\n/* Hero Section */\n\nnav {\n    position: absolute;\n    width: 100%;\n\n    display: flex;\n    list-style-type: none;\n    justify-content: space-evenly;\n    padding: 1.5rem 25rem;\n\n    z-index: 1;\n}\n\nnav li {\n    color: white;\n    font-size: 1.125rem;\n    cursor: pointer;\n}\n\n.hero {\n    position: relative;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.hero.fade-out {\n    opacity: 0;\n}\n\n.hero-bg {\n    background-image: url('../assets/hero-img.jpg');\n    height: 100vh;\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n.hero-bg::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */\n}\n\n\n.hero-content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -60%);\n    text-align: center;\n}\n\n.hero-content {\n    color: white;\n}\n\n.hero-h1 {\n    font-family: 'Hammersmith One', sans-serif;\n    font-size: 6rem;\n    font-weight: 400;\n    letter-spacing: 8px;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n.hero-h2 {\n    font-size: 3rem;\n}\n\n/* Body */\n\n.body {\n    background-color: #F5F5EF;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.body.fade-out {\n    opacity: 0;\n}\n\n.body-content {\n    display: flex;\n    padding: 150px;\n}\n\n.body-header {\n    font-size: 3rem;\n    font-weight: 400;\n    line-height: 1;\n    margin-bottom: 30px;\n}\n\n.body-p {\n    width: 80%;\n    margin-bottom: 30px;\n}\n\n.body-btn {\n    background-color: black;\n    color: white;\n}\n\n\n.body-imgs-container {\n    display: flex;\n    gap: 30px;\n}\n\n.body-imgs-container img {\n    width: 200px;\n    height: 410px;\n    object-fit: cover;\n}\n\n/* Feature */\n\n.ftr {\n    background-color: black;\n    color: white;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.ftr.fade-out {\n    opacity: 0;\n}\n\n.ftr-content {\n    padding: 150px;\n    text-align: center;\n}\n\n.ftr-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 80px;\n}\n\n.ftr-cards {\n    display: flex;\n    justify-content: space-evenly;\n    gap: 30px\n}\n\n.card-icon {\n    width: 60px;\n    margin-bottom: 40px;\n}\n\n.card-header {\n    font-weight: 700;\n    text-transform: uppercase;\n    width: 180px;\n    margin: 0 auto 40px auto;\n}\n\n.card-p {\n    width: 180px;\n    text-align: center;\n}\n\n/* CTA */\n\n.cta {\n    background-color: #F5F5EF;\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    padding: 100px;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.cta.fade-out {\n    opacity: 0;\n}\n\n.cta-left {\n    width: 50%;\n    object-fit: cover;\n    overflow: hidden;\n    \n}\n\n.cta-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 40px;\n}\n\n.cta-p {\n    font-size: 1.2rem;\n    width: 80%;\n    margin-bottom: 40px;\n}\n\n.cta-btn {\n    background-color: #715128;\n    color: white;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -743,17 +778,17 @@ function generateElement (elType, elClass, elAttrSet, elAttrValue, elText) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   createHome: () => (/* binding */ createHome),
+/* harmony export */   wipeHome: () => (/* binding */ wipeHome)
 /* harmony export */ });
 /* harmony import */ var _createElements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createElements */ "./src/createElements.js");
-/* harmony import */ var _assets_hero_img_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hero-img.jpg */ "./src/assets/hero-img.jpg");
-/* harmony import */ var _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/body-img1.jpg */ "./src/assets/body-img1.jpg");
-/* harmony import */ var _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/body-img2.webp */ "./src/assets/body-img2.webp");
-/* harmony import */ var _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/body-img3.jpg */ "./src/assets/body-img3.jpg");
-/* harmony import */ var _assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/ftr-icon1.svg */ "./src/assets/ftr-icon1.svg");
-/* harmony import */ var _assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/ftr-icon3.svg */ "./src/assets/ftr-icon3.svg");
-/* harmony import */ var _assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/ftr-icon2.svg */ "./src/assets/ftr-icon2.svg");
-/* harmony import */ var _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/cta-img.jpg */ "./src/assets/cta-img.jpg");
+/* harmony import */ var _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/body-img1.jpg */ "./src/assets/body-img1.jpg");
+/* harmony import */ var _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/body-img2.webp */ "./src/assets/body-img2.webp");
+/* harmony import */ var _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/body-img3.jpg */ "./src/assets/body-img3.jpg");
+/* harmony import */ var _assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/ftr-icon1.svg */ "./src/assets/ftr-icon1.svg");
+/* harmony import */ var _assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/ftr-icon3.svg */ "./src/assets/ftr-icon3.svg");
+/* harmony import */ var _assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/ftr-icon2.svg */ "./src/assets/ftr-icon2.svg");
+/* harmony import */ var _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/cta-img.jpg */ "./src/assets/cta-img.jpg");
 
 
 
@@ -766,14 +801,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
+const hero = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'hero', 0, 0, 0)
+const body = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'body', 0, 0, 0)
+const feature = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'ftr', 0, 0, 0)
+const cta = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'cta', 0, 0, 0)
 const content = document.getElementById('content');
 
 const createHome = () => {
 
     const createHero = (() => {
-        const hero = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'hero', 0, 0, 0)
         const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-bg', 0, 0, 0)
         const heroContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-content', 0, 0, 0)
 
@@ -787,7 +823,7 @@ const createHome = () => {
     })()
 
     const createBody= (() => {
-        const body = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'body', 0, 0, 0)
+        
         const bodyContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-content', 0, 0, 0)
 
         const bodyText = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-text', 0, 0, 0)
@@ -796,9 +832,9 @@ const createHome = () => {
         const bodyButton = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'body-btn', 0, 0, 'View Menu')
 
         const bodyImages = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-imgs-container', 0, 0, 0)
-        const bodyImg1 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_2__, 0)
-        const bodyImg2 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_3__, 0)
-        const bodyImg3 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_4__, 0)
+        const bodyImg1 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_1__, 0)
+        const bodyImg2 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_2__, 0)
+        const bodyImg3 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_3__, 0)
 
 
         bodyText.append(bodyHeader, bodyPara, bodyButton)
@@ -809,15 +845,15 @@ const createHome = () => {
     })()
     
     const createFeature = (() => {
-        const feature = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'ftr', 0, 0, 0)
+        
         const featureContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-content', 0, 0, 0)
         
         const featureHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'ftr-header', 0, 0, 'Flavored With Love.')
         const featureCards = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-cards', 0, 0, 0)
 
-        const card1 = createCard(_assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_5__, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        const card2 = createCard(_assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_6__, 'Fresh from our Trusted Farms', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        const card3 = createCard(_assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_7__, 'Served with the Finest Touch', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const card1 = createCard(_assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_4__, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const card2 = createCard(_assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_5__, 'Fresh from our Trusted Farms', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        const card3 = createCard(_assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_6__, 'Served with the Finest Touch', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
         function createCard (icon, heading, paragraph) {
             const card = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-card', 0, 0, 0)
@@ -838,11 +874,11 @@ const createHome = () => {
     })()
 
     const createCTA = (() => {
-        const cta = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'cta', 0, 0, 0)
+        
         const ctaLeft = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-left', 0, 0 ,0)
         const ctaRight = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-right', 0, 0 ,0)
 
-        const ctaImg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'cta-img', 'src', _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_8__, 0)
+        const ctaImg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'cta-img', 'src', _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_7__, 0)
 
         const ctaHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'cta-header', 0, 0, 'Send a Message')
         const ctaBody = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'cta-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
@@ -855,7 +891,21 @@ const createHome = () => {
     })()
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHome);
+const wipeHome = () => {
+    const elements = [hero, body, feature, cta]
+
+    elements.forEach((element) => {
+        element.classList.add('fade-out')
+    })
+
+    setTimeout(() => {
+        elements.forEach((element) => {
+            element.remove()
+        })
+    }, 250)
+}
+
+
 
 /***/ }),
 
@@ -1101,22 +1151,24 @@ const createNav = (() => {
     const navMenu = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('li', 'nav-menu', 0, 0, 'Menu')
     const navCtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('li', 'nav-ctn', 0, 0, 'Contact')
 
+    const state = 'home';
+
     navHome.addEventListener('click', (e) => {
         alert('home was clicked')
     })
 
     navMenu.addEventListener('click', (e) => {
-        alert('menu was clicked')
+        ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.wipeHome)()
     })
 
     navCtn.addEventListener('click', (e) => {
-        alert('contact was clicked')
+        ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.wipeHome)()
     })
 
     nav.append(navHome, navMenu, navCtn)
     content.appendChild(nav)
 
-    ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__["default"])()
+    ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.createHome)()
 
 })();
 
