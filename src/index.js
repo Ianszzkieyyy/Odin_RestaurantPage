@@ -15,7 +15,6 @@ const createNav = (() => {
 
     navHome.addEventListener('click', (e) => {
         alert('home was clicked')
-        createHome()
     })
 
     navMenu.addEventListener('click', (e) => {
@@ -28,6 +27,8 @@ const createNav = (() => {
 
     nav.append(navHome, navMenu, navCtn)
     content.appendChild(nav)
+
+    createHome()
 
 })();
 

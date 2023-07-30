@@ -17,8 +17,8 @@ const content = document.getElementById('content');
 const createHome = () => {
 
     const createHero = (() => {
-        const hero = generateElement('div', 'hero', 0, 0, 0)
-        const heroBg = generateElement('img', 'hero-bg', 'src', HeroBg, 0)
+        const hero = generateElement('section', 'hero', 0, 0, 0)
+        const heroBg = generateElement('div', 'hero-bg', 0, 0, 0)
         const heroContent = generateElement('div', 'hero-content', 0, 0, 0)
 
         const heroHeader = generateElement('h1', 'hero-h1', 0, 0, 'Filipino Cuisine')
@@ -56,7 +56,7 @@ const createHome = () => {
         const feature = generateElement('section', 'ftr', 0, 0, 0)
         const featureContent = generateElement('div', 'ftr-content', 0, 0, 0)
         
-        const featureHeader = generateElement('h3', 'feature-header', 0, 0, 'Flavored With Love.')
+        const featureHeader = generateElement('h3', 'ftr-header', 0, 0, 'Flavored With Love.')
         const featureCards = generateElement('div', 'ftr-cards', 0, 0, 0)
 
         const card1 = createCard(FtrIcon1, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
