@@ -16,19 +16,222 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/hero-img.jpg */ "./src/assets/hero-img.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hanken+Grotesk:wght@400;700&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `* {
+___CSS_LOADER_EXPORT___.push([module.id, `/* General */
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;IACI,sBAAsB;IACtB,SAAS;IACT,UAAU;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hanken+Grotesk:wght@400;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\n"],"sourceRoot":""}]);
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+button {
+    border: none;
+    padding: 15px 30px;
+}
+
+h1, h3 {
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+/* Hero Section */
+
+nav {
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    padding: 1.5rem 25rem;
+
+    z-index: 1;
+}
+
+nav li {
+    color: white;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.hero-bg {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.hero-h2 {
+    font-size: 3rem;
+}
+
+/* Body */
+
+.body {
+    background-color: #F5F5EF;
+}
+
+.body-content {
+    display: flex;
+    padding: 150px;
+}
+
+.body-header {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.body-p {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.body-btn {
+    background-color: black;
+    color: white;
+}
+
+
+.body-imgs-container {
+    display: flex;
+    gap: 30px;
+}
+
+.body-imgs-container img {
+    width: 200px;
+    height: 410px;
+    object-fit: cover;
+}
+
+/* Feature */
+
+.ftr {
+    background-color: black;
+    color: white;
+}
+
+.ftr-content {
+    padding: 150px;
+    text-align: center;
+}
+
+.ftr-header {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 80px;
+}
+
+.ftr-cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px
+}
+
+.card-icon {
+    width: 60px;
+    margin-bottom: 40px;
+}
+
+.card-header {
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 180px;
+    margin: 0 auto 40px auto;
+}
+
+.card-p {
+    width: 180px;
+    text-align: center;
+}
+
+/* CTA */
+
+.cta {
+    background-color: #F5F5EF;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 100px;
+}
+
+.cta-left {
+    width: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+
+.cta-header {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.cta-p {
+    font-size: 1.2rem;
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    background-color: #715128;
+    color: white;
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,YAAY;;AAIZ;IACI,sBAAsB;IACtB,SAAS;IACT,UAAU;AACd;;AAEA;IACI,yCAAyC;AAC7C;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,0CAA0C;AAC9C;;AAEA,iBAAiB;;AAEjB;IACI,kBAAkB;IAClB,WAAW;;IAEX,aAAa;IACb,qBAAqB;IACrB,6BAA6B;IAC7B,qBAAqB;;IAErB,UAAU;AACd;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,yDAA+C;IAC/C,aAAa;IACb,2BAA2B;IAC3B,sBAAsB;IACtB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,oCAAoC,EAAE,uDAAuD;AACjG;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,SAAS;IACT,gCAAgC;IAChC,kBAAkB;AACtB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,0CAA0C;IAC1C,eAAe;IACf,gBAAgB;IAChB,mBAAmB;IACnB,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA,SAAS;;AAET;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,YAAY;AAChB;;;AAGA;IACI,aAAa;IACb,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,iBAAiB;AACrB;;AAEA,YAAY;;AAEZ;IACI,uBAAuB;IACvB,YAAY;AAChB;;AAEA;IACI,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B;AACJ;;AAEA;IACI,WAAW;IACX,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA,QAAQ;;AAER;IACI,yBAAyB;IACzB,aAAa;IACb,SAAS;IACT,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,UAAU;IACV,iBAAiB;IACjB,gBAAgB;;AAEpB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,yBAAyB;IACzB,YAAY;AAChB","sourcesContent":["/* General */\n\n@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hanken+Grotesk:wght@400;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    font-family: 'Hanken Grotesk', sans-serif;\n}\n\nbutton {\n    border: none;\n    padding: 15px 30px;\n}\n\nh1, h3 {\n    font-family: 'Hammersmith One', sans-serif;\n}\n\n/* Hero Section */\n\nnav {\n    position: absolute;\n    width: 100%;\n\n    display: flex;\n    list-style-type: none;\n    justify-content: space-evenly;\n    padding: 1.5rem 25rem;\n\n    z-index: 1;\n}\n\nnav li {\n    color: white;\n    font-size: 1.125rem;\n    cursor: pointer;\n}\n\n.hero-bg {\n    background-image: url('../assets/hero-img.jpg');\n    height: 100vh;\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n.hero-bg::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */\n}\n\n.hero {\n    position: relative;\n}\n\n.hero-content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -60%);\n    text-align: center;\n}\n\n.hero-content {\n    color: white;\n}\n\n.hero-h1 {\n    font-family: 'Hammersmith One', sans-serif;\n    font-size: 6rem;\n    font-weight: 400;\n    letter-spacing: 8px;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n.hero-h2 {\n    font-size: 3rem;\n}\n\n/* Body */\n\n.body {\n    background-color: #F5F5EF;\n}\n\n.body-content {\n    display: flex;\n    padding: 150px;\n}\n\n.body-header {\n    font-size: 3rem;\n    font-weight: 400;\n    line-height: 1;\n    margin-bottom: 30px;\n}\n\n.body-p {\n    width: 80%;\n    margin-bottom: 30px;\n}\n\n.body-btn {\n    background-color: black;\n    color: white;\n}\n\n\n.body-imgs-container {\n    display: flex;\n    gap: 30px;\n}\n\n.body-imgs-container img {\n    width: 200px;\n    height: 410px;\n    object-fit: cover;\n}\n\n/* Feature */\n\n.ftr {\n    background-color: black;\n    color: white;\n}\n\n.ftr-content {\n    padding: 150px;\n    text-align: center;\n}\n\n.ftr-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 80px;\n}\n\n.ftr-cards {\n    display: flex;\n    justify-content: space-evenly;\n    gap: 30px\n}\n\n.card-icon {\n    width: 60px;\n    margin-bottom: 40px;\n}\n\n.card-header {\n    font-weight: 700;\n    text-transform: uppercase;\n    width: 180px;\n    margin: 0 auto 40px auto;\n}\n\n.card-p {\n    width: 180px;\n    text-align: center;\n}\n\n/* CTA */\n\n.cta {\n    background-color: #F5F5EF;\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    padding: 100px;\n}\n\n.cta-left {\n    width: 50%;\n    object-fit: cover;\n    overflow: hidden;\n    \n}\n\n.cta-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 40px;\n}\n\n.cta-p {\n    font-size: 1.2rem;\n    width: 80%;\n    margin-bottom: 40px;\n}\n\n.cta-btn {\n    background-color: #715128;\n    color: white;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -125,6 +328,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -535,8 +773,8 @@ const content = document.getElementById('content');
 const createHome = () => {
 
     const createHero = (() => {
-        const hero = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero', 0, 0, 0)
-        const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'hero-bg', 'src', _assets_hero_img_jpg__WEBPACK_IMPORTED_MODULE_1__, 0)
+        const hero = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'hero', 0, 0, 0)
+        const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-bg', 0, 0, 0)
         const heroContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-content', 0, 0, 0)
 
         const heroHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h1', 'hero-h1', 0, 0, 'Filipino Cuisine')
@@ -574,7 +812,7 @@ const createHome = () => {
         const feature = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'ftr', 0, 0, 0)
         const featureContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-content', 0, 0, 0)
         
-        const featureHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'feature-header', 0, 0, 'Flavored With Love.')
+        const featureHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'ftr-header', 0, 0, 'Flavored With Love.')
         const featureCards = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-cards', 0, 0, 0)
 
         const card1 = createCard(_assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_5__, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
@@ -727,6 +965,9 @@ module.exports = __webpack_require__.p + "hero-img.jpg";
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -803,6 +1044,32 @@ module.exports = __webpack_require__.p + "hero-img.jpg";
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -836,7 +1103,6 @@ const createNav = (() => {
 
     navHome.addEventListener('click', (e) => {
         alert('home was clicked')
-        ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__["default"])()
     })
 
     navMenu.addEventListener('click', (e) => {
@@ -849,6 +1115,8 @@ const createNav = (() => {
 
     nav.append(navHome, navMenu, navCtn)
     content.appendChild(nav)
+
+    ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__["default"])()
 
 })();
 
