@@ -2,9 +2,12 @@
 
 import generateElement from './createElements';
 import {createHome, wipeHome} from './homeModule';
+import {createMenu, wipeMenu} from './menuModule';
 import './styles/style.css'
 
 const content = document.getElementById('content');
+
+let state = 'home';
 
 const createNav = (() => {
 
@@ -13,18 +16,23 @@ const createNav = (() => {
     const navMenu = generateElement('li', 'nav-menu', 0, 0, 'Menu')
     const navCtn = generateElement('li', 'nav-ctn', 0, 0, 'Contact')
 
-    const state = 'home';
 
     navHome.addEventListener('click', (e) => {
-        alert('home was clicked')
+        if (state === 'menu') {
+            wipeMenu()
+            createHome()
+            state = 'home'
+            
+        }
     })
 
     navMenu.addEventListener('click', (e) => {
-        wipeHome()
-    })
+        if (state === 'home') {
+            wipeHome()
+            createMenu()
+            state = 'menu'
 
-    navCtn.addEventListener('click', (e) => {
-        wipeHome()
+        }
     })
 
     nav.append(navHome, navMenu, navCtn)

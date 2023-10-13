@@ -17,6 +17,8 @@ const cta = generateElement('section', 'cta', 0, 0, 0)
 const content = document.getElementById('content');
 
 const createHome = () => {
+    const elements = [hero, body, feature, cta]
+
 
     const createHero = (() => {
         const heroBg = generateElement('div', 'hero-bg', 0, 0, 0)
@@ -101,15 +103,19 @@ const createHome = () => {
 }
 
 const wipeHome = () => {
-    const elements = [hero, body, feature, cta]
+    const elements = content.querySelectorAll('*')
 
     elements.forEach((element) => {
-        element.classList.add('fade-out')
+        if (!element.closest('navbar') || !element.contains('navbar')) {
+            element.classList.add('fade-out')
+        }
     })
 
     setTimeout(() => {
         elements.forEach((element) => {
-            element.remove()
+            if (!element.closest('navbar') || !element.contains('navbar')) {
+                element.remove()
+            }
         })
     }, 250)
 }
