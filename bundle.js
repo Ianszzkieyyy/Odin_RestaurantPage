@@ -266,7 +266,80 @@ nav li {
     background-color: #715128;
     color: white;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,YAAY;;AAIZ;IACI,sBAAsB;IACtB,SAAS;IACT,UAAU;AACd;;AAEA;IACI,yCAAyC;AAC7C;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,0CAA0C;AAC9C;;;;AAIA,iBAAiB;;AAEjB;IACI,kBAAkB;IAClB,WAAW;;IAEX,aAAa;IACb,qBAAqB;IACrB,6BAA6B;IAC7B,qBAAqB;;IAErB,UAAU;AACd;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,kBAAkB;;IAElB,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,yDAA+C;IAC/C,aAAa;IACb,2BAA2B;IAC3B,sBAAsB;IACtB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,oCAAoC,EAAE,uDAAuD;AACjG;;;AAGA;IACI,kBAAkB;IAClB,QAAQ;IACR,SAAS;IACT,gCAAgC;IAChC,kBAAkB;AACtB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,0CAA0C;IAC1C,eAAe;IACf,gBAAgB;IAChB,mBAAmB;IACnB,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA,SAAS;;AAET;IACI,yBAAyB;;IAEzB,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,YAAY;AAChB;;;AAGA;IACI,aAAa;IACb,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,iBAAiB;AACrB;;AAEA,YAAY;;AAEZ;IACI,uBAAuB;IACvB,YAAY;;IAEZ,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B;AACJ;;AAEA;IACI,WAAW;IACX,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,YAAY;IACZ,kBAAkB;AACtB;;AAEA,QAAQ;;AAER;IACI,yBAAyB;IACzB,aAAa;IACb,SAAS;IACT,mBAAmB;IACnB,cAAc;;IAEd,cAAc;IACd,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,UAAU;IACV,iBAAiB;IACjB,gBAAgB;;AAEpB;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,UAAU;IACV,mBAAmB;AACvB;;AAEA;IACI,yBAAyB;IACzB,YAAY;AAChB","sourcesContent":["/* General */\n\n@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hanken+Grotesk:wght@400;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    font-family: 'Hanken Grotesk', sans-serif;\n}\n\nbutton {\n    border: none;\n    padding: 15px 30px;\n}\n\nh1, h3 {\n    font-family: 'Hammersmith One', sans-serif;\n}\n\n\n\n/* Hero Section */\n\nnav {\n    position: absolute;\n    width: 100%;\n\n    display: flex;\n    list-style-type: none;\n    justify-content: space-evenly;\n    padding: 1.5rem 25rem;\n\n    z-index: 1;\n}\n\nnav li {\n    color: white;\n    font-size: 1.125rem;\n    cursor: pointer;\n}\n\n.hero {\n    position: relative;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.hero.fade-out {\n    opacity: 0;\n}\n\n.hero-bg {\n    background-image: url('../assets/hero-img.jpg');\n    height: 100vh;\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n.hero-bg::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */\n}\n\n\n.hero-content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -60%);\n    text-align: center;\n}\n\n.hero-content {\n    color: white;\n}\n\n.hero-h1 {\n    font-family: 'Hammersmith One', sans-serif;\n    font-size: 6rem;\n    font-weight: 400;\n    letter-spacing: 8px;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n.hero-h2 {\n    font-size: 3rem;\n}\n\n/* Body */\n\n.body {\n    background-color: #F5F5EF;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.body.fade-out {\n    opacity: 0;\n}\n\n.body-content {\n    display: flex;\n    padding: 150px;\n}\n\n.body-header {\n    font-size: 3rem;\n    font-weight: 400;\n    line-height: 1;\n    margin-bottom: 30px;\n}\n\n.body-p {\n    width: 80%;\n    margin-bottom: 30px;\n}\n\n.body-btn {\n    background-color: black;\n    color: white;\n}\n\n\n.body-imgs-container {\n    display: flex;\n    gap: 30px;\n}\n\n.body-imgs-container img {\n    width: 200px;\n    height: 410px;\n    object-fit: cover;\n}\n\n/* Feature */\n\n.ftr {\n    background-color: black;\n    color: white;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.ftr.fade-out {\n    opacity: 0;\n}\n\n.ftr-content {\n    padding: 150px;\n    text-align: center;\n}\n\n.ftr-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 80px;\n}\n\n.ftr-cards {\n    display: flex;\n    justify-content: space-evenly;\n    gap: 30px\n}\n\n.card-icon {\n    width: 60px;\n    margin-bottom: 40px;\n}\n\n.card-header {\n    font-weight: 700;\n    text-transform: uppercase;\n    width: 180px;\n    margin: 0 auto 40px auto;\n}\n\n.card-p {\n    width: 180px;\n    text-align: center;\n}\n\n/* CTA */\n\n.cta {\n    background-color: #F5F5EF;\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    padding: 100px;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.cta.fade-out {\n    opacity: 0;\n}\n\n.cta-left {\n    width: 50%;\n    object-fit: cover;\n    overflow: hidden;\n    \n}\n\n.cta-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 40px;\n}\n\n.cta-p {\n    font-size: 1.2rem;\n    width: 80%;\n    margin-bottom: 40px;\n}\n\n.cta-btn {\n    background-color: #715128;\n    color: white;\n}\n"],"sourceRoot":""}]);
+
+/* MENU */
+
+.menu {
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+.menu.fade-out {
+    opacity: 0;
+}
+
+.menu-bg {
+    background-color: black;
+    height: 100%;
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+    padding: 100px;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+.gallery__item--6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["/* General */\n\n@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Hanken+Grotesk:wght@400;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    font-family: 'Hanken Grotesk', sans-serif;\n}\n\nbutton {\n    border: none;\n    padding: 15px 30px;\n}\n\nh1, h3 {\n    font-family: 'Hammersmith One', sans-serif;\n}\n\n\n\n/* Hero Section */\n\nnav {\n    position: absolute;\n    width: 100%;\n\n    display: flex;\n    list-style-type: none;\n    justify-content: space-evenly;\n    padding: 1.5rem 25rem;\n\n    z-index: 1;\n}\n\nnav li {\n    color: white;\n    font-size: 1.125rem;\n    cursor: pointer;\n}\n\n.hero {\n    position: relative;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.hero.fade-out {\n    opacity: 0;\n}\n\n.hero-bg {\n    background-image: url('../assets/hero-img.jpg');\n    height: 100vh;\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n.hero-bg::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.3); /* Replace this with the color and opacity you desire */\n}\n\n\n.hero-content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -60%);\n    text-align: center;\n}\n\n.hero-content {\n    color: white;\n}\n\n.hero-h1 {\n    font-family: 'Hammersmith One', sans-serif;\n    font-size: 6rem;\n    font-weight: 400;\n    letter-spacing: 8px;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n.hero-h2 {\n    font-size: 3rem;\n}\n\n/* Body */\n\n.body {\n    background-color: #F5F5EF;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.body.fade-out {\n    opacity: 0;\n}\n\n.body-content {\n    display: flex;\n    padding: 150px;\n}\n\n.body-header {\n    font-size: 3rem;\n    font-weight: 400;\n    line-height: 1;\n    margin-bottom: 30px;\n}\n\n.body-p {\n    width: 80%;\n    margin-bottom: 30px;\n}\n\n.body-btn {\n    background-color: black;\n    color: white;\n}\n\n\n.body-imgs-container {\n    display: flex;\n    gap: 30px;\n}\n\n.body-imgs-container img {\n    width: 200px;\n    height: 410px;\n    object-fit: cover;\n}\n\n/* Feature */\n\n.ftr {\n    background-color: black;\n    color: white;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.ftr.fade-out {\n    opacity: 0;\n}\n\n.ftr-content {\n    padding: 150px;\n    text-align: center;\n}\n\n.ftr-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 80px;\n}\n\n.ftr-cards {\n    display: flex;\n    justify-content: space-evenly;\n    gap: 30px\n}\n\n.card-icon {\n    width: 60px;\n    margin-bottom: 40px;\n}\n\n.card-header {\n    font-weight: 700;\n    text-transform: uppercase;\n    width: 180px;\n    margin: 0 auto 40px auto;\n}\n\n.card-p {\n    width: 180px;\n    text-align: center;\n}\n\n/* CTA */\n\n.cta {\n    background-color: #F5F5EF;\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    padding: 100px;\n\n    /* Animation */\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.cta.fade-out {\n    opacity: 0;\n}\n\n.cta-left {\n    width: 50%;\n    object-fit: cover;\n    overflow: hidden;\n    \n}\n\n.cta-header {\n    font-size: 2.5rem;\n    text-transform: uppercase;\n    font-weight: 400;\n    margin-bottom: 40px;\n}\n\n.cta-p {\n    font-size: 1.2rem;\n    width: 80%;\n    margin-bottom: 40px;\n}\n\n.cta-btn {\n    background-color: #715128;\n    color: white;\n}\n\n/* MENU */\n\n.menu {\n    transition: opacity 0.25s;\n    opacity: 1;\n}\n\n.menu.fade-out {\n    opacity: 0;\n}\n\n.menu-bg {\n    background-color: black;\n    height: 100%;\n}\n\n.menu-content {\n    display: grid;\n    grid-template-columns: repeat(8, 1fr);\n    grid-template-rows: repeat(8, 5vw);\n    grid-gap: 15px;\n    padding: 100px;\n}\n\n.gallery__img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n\n.gallery__item--1 {\n    grid-column-start: 1;\n    grid-column-end: 3;\n    grid-row-start: 1;\n    grid-row-end: 3;\n}\n\n.gallery__item--2 {\n    grid-column-start: 3;\n    grid-column-end: 5;\n    grid-row-start: 1;\n    grid-row-end: 3;\n}\n\n.gallery__item--3 {\n    grid-column-start: 5;\n    grid-column-end: 9;\n    grid-row-start: 1;\n    grid-row-end: 6;\n}\n\n.gallery__item--4 {\n    grid-column-start: 1;\n    grid-column-end: 5;\n    grid-row-start: 3;\n    grid-row-end: 6;\n}\n\n.gallery__item--5 {\n    grid-column-start: 1;\n    grid-column-end: 5;\n    grid-row-start: 6;\n    grid-row-end: 9;\n}\n\n.gallery__item--6 {\n    grid-column-start: 5;\n    grid-column-end: 9;\n    grid-row-start: 6;\n    grid-row-end: 9;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -808,6 +881,8 @@ const cta = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section
 const content = document.getElementById('content');
 
 const createHome = () => {
+    const elements = [hero, body, feature, cta]
+
 
     const createHero = (() => {
         const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-bg', 0, 0, 0)
@@ -892,15 +967,111 @@ const createHome = () => {
 }
 
 const wipeHome = () => {
-    const elements = [hero, body, feature, cta]
+    const elements = content.querySelectorAll('*')
 
     elements.forEach((element) => {
-        element.classList.add('fade-out')
+        if (!element.closest('navbar') || !element.contains('navbar')) {
+            element.classList.add('fade-out')
+        }
     })
 
     setTimeout(() => {
         elements.forEach((element) => {
-            element.remove()
+            if (!element.closest('navbar') || !element.contains('navbar')) {
+                element.remove()
+            }
+        })
+    }, 250)
+}
+
+
+
+/***/ }),
+
+/***/ "./src/menuModule.js":
+/*!***************************!*\
+  !*** ./src/menuModule.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createMenu: () => (/* binding */ createMenu),
+/* harmony export */   wipeMenu: () => (/* binding */ wipeMenu)
+/* harmony export */ });
+/* harmony import */ var _createElements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createElements */ "./src/createElements.js");
+/* harmony import */ var _assets_menu_img1_webp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/menu-img1.webp */ "./src/assets/menu-img1.webp");
+/* harmony import */ var _assets_menu_img2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/menu-img2.jpg */ "./src/assets/menu-img2.jpg");
+/* harmony import */ var _assets_menu_img3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/menu-img3.jpg */ "./src/assets/menu-img3.jpg");
+/* harmony import */ var _assets_menu_img4_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/menu-img4.jpg */ "./src/assets/menu-img4.jpg");
+/* harmony import */ var _assets_menu_img5_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/menu-img5.jpg */ "./src/assets/menu-img5.jpg");
+/* harmony import */ var _assets_menu_img6_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/menu-img6.jpg */ "./src/assets/menu-img6.jpg");
+
+
+
+
+
+
+
+
+
+
+const menu = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'menu', 0, 0, 0)
+const content = document.getElementById('content');
+
+const createMenu = () => {
+
+    const menuGrid = (() => {
+        const menuBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'menu-bg', 0, 0, 0)
+        const menuContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'menu-content', 0, 0, 0)
+
+        const item1 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('figure', 'gallery__item--1', 0,0,0)
+        const img1 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'gallery__img', 'src', _assets_menu_img1_webp__WEBPACK_IMPORTED_MODULE_1__, 0)
+        item1.append(img1)
+
+        const item2 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('figure', 'gallery__item--2', 0,0,0)
+        const img2 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'gallery__img', 'src', _assets_menu_img2_jpg__WEBPACK_IMPORTED_MODULE_2__, 0)
+        item2.append(img2)
+
+        const item3 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('figure', 'gallery__item--3', 0,0,0)
+        const img3 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'gallery__img', 'src', _assets_menu_img3_jpg__WEBPACK_IMPORTED_MODULE_3__, 0)
+        item3.append(img3)
+        
+        const item4 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('figure', 'gallery__item--4', 0,0,0)
+        const img4 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'gallery__img', 'src', _assets_menu_img4_jpg__WEBPACK_IMPORTED_MODULE_4__, 0)
+        item4.append(img4)
+
+        const item5 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('figure', 'gallery__item--5', 0,0,0)
+        const img5 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'gallery__img', 'src', _assets_menu_img5_jpg__WEBPACK_IMPORTED_MODULE_5__, 0)
+        item5.append(img5)
+
+        const item6 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('figure', 'gallery__item--6', 0,0,0)
+        const img6 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'gallery__img', 'src', _assets_menu_img6_jpg__WEBPACK_IMPORTED_MODULE_6__, 0)
+        item6.append(img6)
+
+
+        menuContent.append(item1, item2, item3, item4, item5, item6)
+        menuBg.append(menuContent)
+        menu.append(menuBg)
+        content.append(menu)
+    })()
+
+}
+
+const wipeMenu = () => {
+    const elements = content.querySelectorAll('*')
+
+    elements.forEach((element) => {
+        if (!element.closest('navbar') || !element.contains('navbar')) {
+            element.classList.add('fade-out')
+        }
+    })
+
+    setTimeout(() => {
+        elements.forEach((element) => {
+            if (!element.closest('navbar') || !element.contains('navbar')) {
+                element.remove()
+            }
         })
     }, 250)
 }
@@ -986,6 +1157,66 @@ module.exports = __webpack_require__.p + "ftr-icon3.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "hero-img.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/menu-img1.webp":
+/*!***********************************!*\
+  !*** ./src/assets/menu-img1.webp ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "menu-img1.webp";
+
+/***/ }),
+
+/***/ "./src/assets/menu-img2.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/menu-img2.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "menu-img2.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/menu-img3.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/menu-img3.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "menu-img3.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/menu-img4.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/menu-img4.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "menu-img4.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/menu-img5.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/menu-img5.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "menu-img5.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/menu-img6.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/menu-img6.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "menu-img6.jpg";
 
 /***/ })
 
@@ -1135,7 +1366,9 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _createElements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createElements */ "./src/createElements.js");
 /* harmony import */ var _homeModule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homeModule */ "./src/homeModule.js");
-/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+/* harmony import */ var _menuModule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menuModule */ "./src/menuModule.js");
+/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+
 
 
 
@@ -1144,6 +1377,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const content = document.getElementById('content');
 
+let state = 'home';
+
 const createNav = (() => {
 
     const nav = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('nav', 'navbar', 0, 0, 0);
@@ -1151,18 +1386,23 @@ const createNav = (() => {
     const navMenu = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('li', 'nav-menu', 0, 0, 'Menu')
     const navCtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('li', 'nav-ctn', 0, 0, 'Contact')
 
-    const state = 'home';
 
     navHome.addEventListener('click', (e) => {
-        alert('home was clicked')
+        if (state === 'menu') {
+            (0,_menuModule__WEBPACK_IMPORTED_MODULE_2__.wipeMenu)()
+            ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.createHome)()
+            state = 'home'
+            
+        }
     })
 
     navMenu.addEventListener('click', (e) => {
-        ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.wipeHome)()
-    })
+        if (state === 'home') {
+            (0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.wipeHome)()
+            ;(0,_menuModule__WEBPACK_IMPORTED_MODULE_2__.createMenu)()
+            state = 'menu'
 
-    navCtn.addEventListener('click', (e) => {
-        ;(0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.wipeHome)()
+        }
     })
 
     nav.append(navHome, navMenu, navCtn)
