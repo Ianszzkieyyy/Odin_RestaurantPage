@@ -880,106 +880,124 @@ const feature = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('sec
 const cta = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('section', 'cta', 0, 0, 0)
 const content = document.getElementById('content');
 
+
 const createHome = () => {
+
+    if (!content.contains(hero)) {
+        const createHero = (() => {
+            const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-bg', 0, 0, 0)
+            const heroContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-content', 0, 0, 0)
+    
+            const heroHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h1', 'hero-h1', 0, 0, 'Filipino Cuisine')
+            const heroSub = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h2', 'hero-h2', 0, 0, 'A Taste Of')
+            const heroBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'hero-btn', 0, 0, 'Order Now')
+    
+            heroContent.append(heroSub, heroHeader, heroBtn)
+            hero.append(heroBg, heroContent)
+            content.append(hero)
+        })()
+    }
+
+    if (!content.contains(body)) {
+        const createBody= (() => {
+        
+            const bodyContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-content', 0, 0, 0)
+            const bodyText = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-text', 0, 0, 0)
+            const bodyHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'body-header', 0, 0, 'Passed Down Through Generations')
+            const bodyPara = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'body-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+            const bodyButton = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'body-btn', 0, 0, 'View Menu')
+    
+            const bodyImages = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-imgs-container', 0, 0, 0)
+            const bodyImg1 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_1__, 0)
+            const bodyImg2 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_2__, 0)
+            const bodyImg3 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_3__, 0)
+    
+    
+            bodyText.append(bodyHeader, bodyPara, bodyButton)
+            bodyImages.append(bodyImg1, bodyImg2, bodyImg3)
+            bodyContent.append(bodyText, bodyImages)
+            body.append(bodyContent)
+            content.append(body)
+        })()
+    }
+
+    if (!content.contains(feature)) {
+        const createFeature = (() => {
+        
+            const featureContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-content', 0, 0, 0)
+            
+            const featureHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'ftr-header', 0, 0, 'Flavored With Love.')
+            const featureCards = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-cards', 0, 0, 0)
+    
+            const card1 = createCard(_assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_4__, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+            const card2 = createCard(_assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_5__, 'Fresh from our Trusted Farms', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+            const card3 = createCard(_assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_6__, 'Served with the Finest Touch', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+    
+            function createCard (icon, heading, paragraph) {
+                const card = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-card', 0, 0, 0)
+    
+                const cardIcon = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'card-icon', 'src', icon, 0)
+                const cardHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h4', 'card-header', 0, 0, heading)
+                const cardBody = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'card-p', 0, 0, paragraph)
+    
+                card.append(cardIcon, cardHeader, cardBody)
+    
+                return card
+            }
+    
+            featureCards.append(card1, card2, card3)
+            featureContent.append(featureHeader, featureCards)
+            feature.append(featureContent)
+            content.append(feature)
+        })()
+    }
+    
+    
+    if (!content.contains(cta)) {
+        const createCTA = (() => {
+        
+            const ctaLeft = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-left', 0, 0 ,0)
+            const ctaRight = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-right', 0, 0 ,0)
+    
+            const ctaImg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'cta-img', 'src', _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_7__, 0)
+    
+            const ctaHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'cta-header', 0, 0, 'Send a Message')
+            const ctaBody = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'cta-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+            const ctaBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'cta-btn', 0, 0, 'Contact Us')
+    
+            ctaLeft.append(ctaImg)
+            ctaRight.append(ctaHeader, ctaBody, ctaBtn)
+            cta.append(ctaLeft, ctaRight)
+            content.append(cta)
+        })()
+    }
+    
     const elements = [hero, body, feature, cta]
 
-
-    const createHero = (() => {
-        const heroBg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-bg', 0, 0, 0)
-        const heroContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'hero-content', 0, 0, 0)
-
-        const heroHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h1', 'hero-h1', 0, 0, 'Filipino Cuisine')
-        const heroSub = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h2', 'hero-h2', 0, 0, 'A Taste Of')
-        const heroBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'hero-btn', 0, 0, 'Order Now')
-
-        heroContent.append(heroSub, heroHeader, heroBtn)
-        hero.append(heroBg, heroContent)
-        content.appendChild(hero)
-    })()
-
-    const createBody= (() => {
-        
-        const bodyContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-content', 0, 0, 0)
-
-        const bodyText = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-text', 0, 0, 0)
-        const bodyHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'body-header', 0, 0, 'Passed Down Through Generations')
-        const bodyPara = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'body-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        const bodyButton = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'body-btn', 0, 0, 'View Menu')
-
-        const bodyImages = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'body-imgs-container', 0, 0, 0)
-        const bodyImg1 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img1_jpg__WEBPACK_IMPORTED_MODULE_1__, 0)
-        const bodyImg2 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img2_webp__WEBPACK_IMPORTED_MODULE_2__, 0)
-        const bodyImg3 = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'body-img', 'src', _assets_body_img3_jpg__WEBPACK_IMPORTED_MODULE_3__, 0)
-
-
-        bodyText.append(bodyHeader, bodyPara, bodyButton)
-        bodyImages.append(bodyImg1, bodyImg2, bodyImg3)
-        bodyContent.append(bodyText, bodyImages)
-        body.append(bodyContent)
-        content.append(body)
-    })()
-    
-    const createFeature = (() => {
-        
-        const featureContent = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-content', 0, 0, 0)
-        
-        const featureHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'ftr-header', 0, 0, 'Flavored With Love.')
-        const featureCards = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-cards', 0, 0, 0)
-
-        const card1 = createCard(_assets_ftr_icon1_svg__WEBPACK_IMPORTED_MODULE_4__, 'Prepped by Talented, Professional Chefs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        const card2 = createCard(_assets_ftr_icon3_svg__WEBPACK_IMPORTED_MODULE_5__, 'Fresh from our Trusted Farms', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        const card3 = createCard(_assets_ftr_icon2_svg__WEBPACK_IMPORTED_MODULE_6__, 'Served with the Finest Touch', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-
-        function createCard (icon, heading, paragraph) {
-            const card = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'ftr-card', 0, 0, 0)
-
-            const cardIcon = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'card-icon', 'src', icon, 0)
-            const cardHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h4', 'card-header', 0, 0, heading)
-            const cardBody = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'card-p', 0, 0, paragraph)
-
-            card.append(cardIcon, cardHeader, cardBody)
-
-            return card
+    elements.forEach((element) => {
+        if (element.classList.contains('fade-out')) {
+            console.log(`${element} has classlist`)
+            element.classList.remove('fade-out')
         }
-
-        featureCards.append(card1, card2, card3)
-        featureContent.append(featureHeader, featureCards)
-        feature.append(featureContent)
-        content.append(feature)
-    })()
-
-    const createCTA = (() => {
-        
-        const ctaLeft = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-left', 0, 0 ,0)
-        const ctaRight = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('div', 'cta-right', 0, 0 ,0)
-
-        const ctaImg = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('img', 'cta-img', 'src', _assets_cta_img_jpg__WEBPACK_IMPORTED_MODULE_7__, 0)
-
-        const ctaHeader = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('h3', 'cta-header', 0, 0, 'Send a Message')
-        const ctaBody = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('p', 'cta-p', 0, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-        const ctaBtn = (0,_createElements__WEBPACK_IMPORTED_MODULE_0__["default"])('button', 'cta-btn', 0, 0, 'Contact Us')
-
-        ctaLeft.append(ctaImg)
-        ctaRight.append(ctaHeader, ctaBody, ctaBtn)
-        cta.append(ctaLeft, ctaRight)
-        content.append(cta)
-    })()
+    })
 }
 
 const wipeHome = () => {
-    const elements = content.querySelectorAll('*')
+    const elements = [hero, body, feature, cta]
 
     elements.forEach((element) => {
-        if (!element.closest('navbar') || !element.contains('navbar')) {
-            element.classList.add('fade-out')
-        }
+        element.classList.add('fade-out') 
     })
 
     setTimeout(() => {
         elements.forEach((element) => {
-            if (!element.closest('navbar') || !element.contains('navbar')) {
-                element.remove()
-            }
+            const childElements = element.querySelectorAll('*');
+
+            childElements.forEach((child) => {
+                child.remove();
+            })
+            
+            element.remove()  
         })
     }, 250)
 }
@@ -1056,22 +1074,32 @@ const createMenu = () => {
         content.append(menu)
     })()
 
+    const elements = [menu]
+
+    elements.forEach((element) => {
+        if (element.classList.contains('fade-out')) {
+            console.log(`${element} has classlist`)
+            element.classList.remove('fade-out')
+        }
+    })
 }
 
 const wipeMenu = () => {
-    const elements = content.querySelectorAll('*')
+    const elements = [menu]
 
     elements.forEach((element) => {
-        if (!element.closest('navbar') || !element.contains('navbar')) {
-            element.classList.add('fade-out')
-        }
+        element.classList.add('fade-out') 
     })
 
     setTimeout(() => {
         elements.forEach((element) => {
-            if (!element.closest('navbar') || !element.contains('navbar')) {
-                element.remove()
-            }
+            const childElements = element.querySelectorAll('*');
+
+            childElements.forEach((child) => {
+                child.remove();
+            })
+            
+            element.remove()  
         })
     }, 250)
 }
@@ -1401,7 +1429,6 @@ const createNav = (() => {
             (0,_homeModule__WEBPACK_IMPORTED_MODULE_1__.wipeHome)()
             ;(0,_menuModule__WEBPACK_IMPORTED_MODULE_2__.createMenu)()
             state = 'menu'
-
         }
     })
 
