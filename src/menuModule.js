@@ -48,22 +48,32 @@ const createMenu = () => {
         content.append(menu)
     })()
 
+    const elements = [menu]
+
+    elements.forEach((element) => {
+        if (element.classList.contains('fade-out')) {
+            console.log(`${element} has classlist`)
+            element.classList.remove('fade-out')
+        }
+    })
 }
 
 const wipeMenu = () => {
-    const elements = content.querySelectorAll('*')
+    const elements = [menu]
 
     elements.forEach((element) => {
-        if (!element.closest('navbar') || !element.contains('navbar')) {
-            element.classList.add('fade-out')
-        }
+        element.classList.add('fade-out') 
     })
 
     setTimeout(() => {
         elements.forEach((element) => {
-            if (!element.closest('navbar') || !element.contains('navbar')) {
-                element.remove()
-            }
+            const childElements = element.querySelectorAll('*');
+
+            childElements.forEach((child) => {
+                child.remove();
+            })
+            
+            element.remove()  
         })
     }, 250)
 }

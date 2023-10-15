@@ -31,7 +31,6 @@ const createNav = (() => {
             wipeHome()
             createMenu()
             state = 'menu'
-
         }
     })
 
